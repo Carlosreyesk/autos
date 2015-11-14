@@ -10,7 +10,7 @@ class AutosController < ApplicationController
   		@auto = Auto.new(auto_params)
  
   		if @auto.save
-    		redirect_to @article
+    		redirect_to @auto
   		else
     		render 'new'
   		end
