@@ -1,7 +1,7 @@
 class AutosController < ApplicationController
 	
 	http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
-	
+
 	def new
 		@auto = Auto.new
 	end
@@ -9,7 +9,7 @@ class AutosController < ApplicationController
 	def create
   		@auto = Auto.new(auto_params)
  
-  		if @article.save
+  		if @auto.save
     		redirect_to @article
   		else
     		render 'new'
