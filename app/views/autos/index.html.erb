@@ -1,0 +1,17 @@
+<h1>Listing articles</h1>
+<%= link_to 'Anuncie su auto', new_auto_path %>
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Modelo</th>
+  </tr>
+ 
+  <% @autos.each do |auto| %>
+    <tr>
+      <td><%= auto.marca %></td>
+      <td><%= auto.modelo %></td>
+      <td><%= link_to 'Show', auto_path(auto) %></td>
+      <td><%= link_to 'Edit', edit_auto_path(auto) %></td>
+    </tr>
+  <% end %>
+</table>

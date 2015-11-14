@@ -1,0 +1,35 @@
+<h1>Editing auto</h1>
+ 
+<%= form_for :auto, url: auto_path(@auto), method: :patch do |f| %>
+ 
+  <% if @auto.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@auto.errors.count, "error") %> prohibited
+        this auto from being saved:
+      </h2>
+      <ul>
+        <% @auto.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :marca %><br>
+    <%= f.text_field :marca %>
+  </p>
+ 
+  <p>
+    <%= f.label :modelo %><br>
+    <%= f.text_field :modelo %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', autos_path %>
