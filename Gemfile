@@ -7,6 +7,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'clearance'
+gem 'pg'
 gem 'sdoc', group: :doc
 
 group :development, :test do
@@ -17,7 +19,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
