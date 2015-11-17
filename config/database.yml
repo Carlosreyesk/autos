@@ -9,7 +9,7 @@ development:
   encoding: utf8
   database: project_development
   pool: 5
-  username: 
+  username: carlosreyes
   password:
 
 test: &TEST
@@ -25,7 +25,7 @@ production:
   encoding: utf8
   database: project_production
   pool: 5
-  username: 
+  username: carlosreyes
   password:
 
 cucumber:
